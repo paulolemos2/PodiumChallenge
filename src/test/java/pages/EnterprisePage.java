@@ -34,7 +34,7 @@ public class EnterprisePage extends BasePage {
     }
 
     public EnterprisePage fillFormRequestInformationNumberOfLocations(String location) {
-        browser.findElement(By.id("No_of_Locations__c")).sendKeys("2");
+        browser.findElement(By.id("No_of_Locations__c")).sendKeys(location);
 
         return this;
 
@@ -86,6 +86,12 @@ public class EnterprisePage extends BasePage {
     }
 
     public EnterprisePage verifyErrorMessageEmail(String id, String errorMessage) {
+        verifyValidMessage(id,errorMessage);
+
+        return this;
+    }
+
+    public EnterprisePage verifyErrorMessageLocations(String id, String errorMessage) {
         verifyValidMessage(id,errorMessage);
 
         return this;

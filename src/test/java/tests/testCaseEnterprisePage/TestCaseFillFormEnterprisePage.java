@@ -41,6 +41,14 @@ public class TestCaseFillFormEnterprisePage {
     }
 
     @Test
+    public void testCaseEnterprisePageFillFormWithoutLocations() {
+        new EnterprisePage(browser)
+                .checkEnterprisePage("Paulo","Lemos","paulo.lemos@gmail.com",
+                        "","Podium","+5561982205290")
+                .verifyErrorMessageLocations("ValidMsgNo_of_Locations__c","Must be a number.");
+    }
+
+    @Test
     public void testCaseEnterprisePageFillFormWithoutCompany() {
         new EnterprisePage(browser)
                 .checkEnterprisePage("Paulo","Lemos","paulo.lemos@gmail.com",
