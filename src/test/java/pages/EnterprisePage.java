@@ -52,7 +52,7 @@ public class EnterprisePage extends BasePage {
         return this;
     }
 
-    public EnterprisePage fillFormRequestInformationWithoutMobilePhone(String firstName, String lastName, String email,
+    public EnterprisePage fillFormRequestInformation(String firstName, String lastName, String email,
                                                     String locations, String company, String mobilePhone) {
         fillFormRequestInformationName(firstName, lastName)
                 .fillFormRequestInformationEmail(email)
@@ -69,7 +69,7 @@ public class EnterprisePage extends BasePage {
         return this;
     }
 
-    public EnterprisePage verifyValidMsgMobilePhone(String id, String errorMessage) {
+    public EnterprisePage verifyValidMessage(String id, String errorMessage) {
         WebDriverWait wait = new WebDriverWait(browser, 10);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(id)));
 
@@ -79,10 +79,34 @@ public class EnterprisePage extends BasePage {
         return this;
     }
 
+    public EnterprisePage verifyErrorMessageName(String id, String errorMessage) {
+        verifyValidMessage(id,errorMessage);
+
+        return this;
+    }
+
+    public EnterprisePage verifyErrorMessageEmail(String id, String errorMessage) {
+        verifyValidMessage(id,errorMessage);
+
+        return this;
+    }
+
+    public EnterprisePage verifyErrorMessageCompany(String id, String errorMessage) {
+        verifyValidMessage(id,errorMessage);
+
+        return this;
+    }
+
+    public EnterprisePage verifyErrorMessageMobilePhone(String id, String errorMessage) {
+        verifyValidMessage(id,errorMessage);
+
+        return this;
+    }
+
     public EnterprisePage checkEnterprisePage(String firstName, String lastName, String email,
                                               String locations, String company, String mobilePhone) {
         goToTheEnterprisePage()
-            .fillFormRequestInformationWithoutMobilePhone(firstName,lastName,email,locations,company,mobilePhone)
+            .fillFormRequestInformation(firstName,lastName,email,locations,company,mobilePhone)
                 .clickRequestInformationButton();
 
         return this;

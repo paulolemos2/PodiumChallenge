@@ -78,14 +78,14 @@ public class CreateAccountPage extends BasePage{
         return this;
     }
 
-    public CreateAccountPage verifyErrorMessageBusinessName(String id, String errormessage) {
-        verifyErrorMessage(id,errormessage);
+    public CreateAccountPage verifyErrorMessageBusinessName(String id, String errorMessage) {
+        verifyErrorMessage(id,errorMessage);
 
         return this;
     }
 
-    public CreateAccountPage verifyErrorMessageEmail(String id, String errormessage) {
-        verifyErrorMessage(id,errormessage);
+    public CreateAccountPage verifyErrorMessageEmail(String id, String errorMessage) {
+        verifyErrorMessage(id,errorMessage);
 
         return this;
     }
