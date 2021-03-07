@@ -31,5 +31,9 @@ Sometimes the title of the initial page is "Messaging Tools for Local Business |
 
 ![PodiumTitle2](https://user-images.githubusercontent.com/56842956/110227132-d1eb7380-7ed3-11eb-9e43-56b2b92818b6.png)
 
+## License
 
+The MIT License (MIT)
+
+Copyright ©️ 2021 - Podium Challenge
 
