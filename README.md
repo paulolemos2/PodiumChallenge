@@ -4,7 +4,7 @@
 
 <img src="https://img.shields.io/static/v1?label=Java&message=Selenium&color=blue&style=for-the-badge&logo=java"/>
 
-> Status do Projeto: Concluido :heavy_check_mark:
+> Project status: Finished :heavy_check_mark:
 
 ## Development setup :gear: 
 
